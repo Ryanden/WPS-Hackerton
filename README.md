@@ -1,8 +1,6 @@
-
-새로운 커밋 
-ㄹㄹㄹㄹㄹㄹㄹㄹㄹ\
-fffffffff
-
-
-첫번째 커밋 
-
+kdh commit
+psm commit
+rec commit
+test commit
+test commit2
+test commit3
