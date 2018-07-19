@@ -2,7 +2,7 @@
 
 # project Secrets
 /.secrets
-
+##
 # Django STATIC_ROOT path
 /.static
 ### Django ###
