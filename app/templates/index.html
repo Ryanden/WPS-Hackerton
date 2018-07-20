@@ -10,10 +10,11 @@
     <title>베스킨라벤스31</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="{% static 'css/album.css' %}">
   </head>
 
   <body>
@@ -22,7 +23,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow" style="background-image: url(img/bg_header.gif)">
         <div class="container">
           <a href="#" class="navbar-brand m-auto">
-            <img src="img/logo_baskinrobbins.png" alt="">
+            <img src="{% static 'img/logo_baskinrobbins.png' %}" alt="">
           </a>
 
         </div>
@@ -31,18 +32,18 @@
 
     <main role="main">
 
-      <section>
-        <img src="img/bg_icecream_menu.gif" alt="" style="width: 100%">
-      </section>
-      <section>
+      <div>
+        <img src="{% static 'img/bg_icecream_menu.gif' %}" alt="" style="width: 100%">
+      </div>
+      <div>
           <div class="container">
              <div class="text-center m-5">
-                 <img src="img/icon_title_1.png" alt="">
-                 <img src="img/h_title_A.png" alt="">
-                 <img src="img/icon_title_2.png" alt="">
+                 <img src="{% static 'img/icon_title_1.png' %}" alt="">
+                 <img src="{% static 'img/h_title_A.png' %}" alt="">
+                 <img src="{% static 'img/icon_title_2.png' %}" alt="">
              </div>
           </div>
-      </section>
+      </div>
       <div class="album py-5 bg-light">
         <div class="container">
 
@@ -169,11 +170,11 @@
                      </div>
                     </div>
                   <div class="d-flex justify-content-between align-items-center">
-                    <img src="img/ice.png" width="100%" alt="">
+                    <img src="{% static 'img/ice.png' %}" width="100%" alt="">
 
                   </div>
                   <div class="d-flex justify-content-between align-items-center" >
-                      <img src="img/bg_icecream_corn_2.png" width="40%" alt="" class="m-auto" >
+                      <img src="{% static 'img/bg_icecream_corn_2.png' %}" width="40%" alt="" class="m-auto" >
                   </div>
                 </div>
               </div>
