@@ -5,5 +5,7 @@ from . import views
 app_name = 'menu'
 
 urlpatterns = [
+
     path('', views.menu_list, name='menu-list'),
+
 ]

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>베스킨라벤스31</title>
+    <title>배스킨라빈스</title>
 
     <!-- Bootstrap core CSS -->
     {% load static %}
@@ -20,7 +20,7 @@
   <body>
 
     <header>
-      <div class="navbar navbar-dark bg-dark box-shadow" style="background-image: url(img/bg_header.gif)">
+      <div class="navbar navbar-dark bg-dark box-shadow" style="background-image: url({% static 'img/bg_header.gif' %})">
         <div class="container">
           <a href="#" class="navbar-brand m-auto">
             <img src="{% static 'img/logo_baskinrobbins.png' %}" alt="">
@@ -29,28 +29,8 @@
         </div>
       </div>
     </header>
-
-
-
-      <div>
-        <img src="{% static 'img/bg_icecream_menu.gif' %}" alt="" style="width: 100%">
-      </div>
-      <div>
-          <div class="container">
-             <div class="text-center m-5">
-                 <img src="{% static 'img/icon_title_1.png' %}" alt="">
-                 <img src="{% static 'img/h_title_A.png' %}" alt="">
-                 <img src="{% static 'img/icon_title_2.png' %}" alt="">
-             </div>
-          </div>
-      </div>
-
-      {% block content %}
-
-      {% endblock %}
-
-
-
+    {% block contents %}
+    {% endblock %}
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
