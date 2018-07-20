@@ -2,6 +2,7 @@ import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
+from .models import IceCream
 
 
 class BaskinCrawler:
@@ -52,15 +53,26 @@ class BaskinCrawler:
             content_type = li.select_one('div.hashtag li a')
 
             if content_name is not None and content_type is not None:
-                content_instance = BaskinCrawler(
-                    name=content_name.text,
-                    ice_type=content_type.text,
-                    description='공통사항',
-                )
-                ice_cream_list.append(content_instance)
 
-        for item in ice_cream_list:
-            print(item)
+                IceCream.objects.create(
+                    name=content_name.text,
+                    type=content_type.text,
+                )
+
+                # content_instance = BaskinCrawler(
+                #     name=content_name.text,
+                #     ice_type=content_type.text,
+                #     description='공통사항',
+                # )
+                # ice_cream_list.append(content_instance)
+
+
+
+        # for item in ice_cream_list:
+        #     print(item)
+
+
+
 
     def __str__(self):
         return f'이름: {self.name} / 타입:{self.ice_type} / {self.description}'
