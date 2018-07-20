@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def main_page(request):
+def menu_list(request):
 
+    return render(request, 'menus/menu_list.html')
 
-    return render(request, 'index.html')
