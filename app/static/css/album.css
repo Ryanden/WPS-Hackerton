@@ -45,3 +45,10 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+/*footer*/
+
+ul,ol,li { list-style:none; }
+.footer_ul{ clear:both }
+.footer_ul_area > li { float:left; margin-right:30px}
