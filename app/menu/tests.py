@@ -1,8 +1,8 @@
 from django.test import TestCase, TransactionTestCase
 
-
 # Create your tests here.
 from .models import IceCream
+
 
 class IceCreamTestCase(TransactionTestCase):
 
@@ -17,3 +17,6 @@ class IceCreamTestCase(TransactionTestCase):
         self.create_dummy_data()
 
         print(IceCream.objects.all())
+
+
+

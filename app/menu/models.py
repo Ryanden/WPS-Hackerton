@@ -7,7 +7,7 @@ class IceCream(models.Model):
 
     name = models.CharField(max_length=100)
 
-    # image = models.ImageField()
+    image = models.ImageField(blank=True)
 
     type = models.CharField(max_length=100)
 
