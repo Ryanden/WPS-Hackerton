@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+<article class="view_product icecream">
+    <header class="header">
+        <h2 class="">
+            <small class="name">APPLE MINT</small>
+            <span class="subtitle">{{ice_cream.name}}</span>
+        </h2>
+        <p class="content">
+            상큼한 청사과맛과 시원한 민트향이 기분까지 상쾌하게 </p>
+        <div class="photo">
+            <img src="{{ice_cream.image}}" alt="">
+        </div>
+
+        <div class="buy">
+            <a href="http&#58;//www.happyconstore.com/goods/detail.do?goodsNo=1474297623217091" target="_blank">구매하기</a>
+        </div>
+    </header>
+    <div class="prdinfo">
+        <p class="bg_con"><img src="https://www.baskinrobbins.co.kr/assets/images/menu/img_con.png" alt=""></p>
+    </div>
+</article>
+{% endblock %}

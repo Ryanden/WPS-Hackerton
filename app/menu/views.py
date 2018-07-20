@@ -13,13 +13,24 @@ def menu_list(request):
     # f.delete()
     # create_db()
 
-    icecream = IceCream.objects.all()
+    ice_cream = IceCream.objects.all()
 
     context = {
-        'ice_creams': icecream
+        'ice_creams': ice_cream
     }
 
     return render(request, 'menus/menu_list.html', context)
+
+
+def menu_detail(request, pk):
+
+    ice_cream = IceCream.objects.get(pk=pk)
+
+    context = {
+        'ice_cream': ice_cream
+    }
+
+    return render(request, 'menus/menu_detail.html', context)
 
 
 def create_db():
@@ -67,10 +78,3 @@ def create_db():
             )
             count = count + 1
 
-
-
-
-def menu_detail(request, pk):
-
-    pass
-    # return
