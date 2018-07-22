@@ -40,7 +40,7 @@ def create_db():
 
     soup = BeautifulSoup(html, 'lxml')
 
-    ice_cream_list = []
+    # ice_cream_list = []
 
     ul_contents = soup.select("ul.list li")
 
