@@ -2,7 +2,7 @@ import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
-from .models import IceCream
+# from .models import IceCream
 
 
 class BaskinCrawler:
@@ -15,9 +15,9 @@ class BaskinCrawler:
 
     @classmethod
     def create_html(cls):
-        url = 'https://baskinrobbins.co.kr/menu/list.php?top=A'
+        url = 'https://www.wadiz.kr/web/wreward/main'
 
-        file_path = 'data/ice_cream_list.html'
+        file_path = 'data/wadiz_reward_list.html'
 
         driver = webdriver.Chrome('driver/chromedriver')
 
@@ -54,28 +54,19 @@ class BaskinCrawler:
 
             if content_name is not None and content_type is not None:
 
-                IceCream.objects.create(
+                content_instance = BaskinCrawler(
                     name=content_name.text,
-                    type=content_type.text,
+                    ice_type=content_type.text,
+                    description='공통사항',
                 )
+                ice_cream_list.append(content_instance)
 
-                # content_instance = BaskinCrawler(
-                #     name=content_name.text,
-                #     ice_type=content_type.text,
-                #     description='공통사항',
-                # )
-                # ice_cream_list.append(content_instance)
-
-
-
-        # for item in ice_cream_list:
-        #     print(item)
-
-
-
+        for item in ice_cream_list:
+            print(item)
 
     def __str__(self):
         return f'이름: {self.name} / 타입:{self.ice_type} / {self.description}'
 
 
-BaskinCrawler.get_ice_cream_list()
+# BaskinCrawler.get_ice_cream_list()
+BaskinCrawler.create_html()
